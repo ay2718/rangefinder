@@ -44,8 +44,8 @@ void Display::clear() {
 }
 
 bool Display::write(int digit) {
+    clear();
     if (digit < 0 || digit > 9) {
-        clear();
         return false;
     } else {
         for(uint8_t shifter = 0b10000000, uint8_t i = 0; shifter > 0; shifter >>= 1, i++) {
