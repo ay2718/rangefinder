@@ -1,0 +1,13 @@
+#include "rangefinder.h"
+
+Rangefinder range(7, 6);
+
+void setup() {
+  Serial.begin (9600);
+}
+
+void loop() {
+  range.pulse();
+  range.print();
+  delay(100);
+}
