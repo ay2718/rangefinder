@@ -50,7 +50,7 @@ bool Display::write(int digit) {
     } else {
         for(uint8_t shifter = 0b10000000, uint8_t i = 0; shifter > 0; shifter >>= 1, i++) {
             bool value = digits[digit] & shifter;
-            digitalWrite(pins[i], !value);
+            digitalWrite(pins[i], value);
         }
     }
 }
